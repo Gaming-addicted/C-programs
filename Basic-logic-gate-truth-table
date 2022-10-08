@@ -1,0 +1,71 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+void And()
+{       int i,j,a[2][2];     
+	for(i=0;i<=1;i++)
+	{
+		for(j=0;j<=1;j++)
+		{
+			a[i][j]=i&&j;
+		}
+	}
+	printf("X  Y  :X and Y\n");
+	for(i=0;i<=1;i++)
+	{
+	
+		for(j=0;j<=1;j++)
+		{
+			printf("%d  %d  :   %d \n",i,j,a[i][j]);
+		}
+	}
+}
+
+void Or()
+{       int i,j,b[2][2];     
+	for(i=0;i<=1;i++)
+	{
+		for(j=0;j<=1;j++)
+		{
+			b[i][j]=i||j;
+		}
+	}
+	printf("X  Y  :X and Y\n");
+	for(i=0;i<=1;i++)
+	{
+	
+		for(j=0;j<=1;j++)
+		{
+			printf("%d  %d  :   %d \n",i,j,b[i][j]);
+		}
+	}
+}
+void Not()
+{       int i,j,c[2];     
+	for(i=0;i<=1;i++)
+	{
+		c[i]=!i;
+	}
+	printf("X  : NOT X\n");
+	for(i=0;i<=1;i++)
+	{
+			printf("%d  :  %d \n",i,c[i]);
+	}
+}
+
+int main()
+{
+	int n;
+	while(1){
+        printf("1:AND 2:OR 3:NOT 4:EXIT\n");
+        scanf("%d",&n);
+        switch(n){
+		case 1:And();break;
+	        case 2:Or();break;
+	        case 3:Not();break;
+	        case 4:exit(1);break;
+	        default:printf("Please Choose the correct option\n");break;
+		}
+	}	
+	return 0;
+}
